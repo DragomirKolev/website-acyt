@@ -1,80 +1,75 @@
-﻿body
-{
-    background: -moz-linear-gradient(center top , #B3B3B0 0px, #E3E2DD 500px) no-repeat scroll 0 0 #E3E2DD;
-    font-family: "Segoe UI" , "Trebuchet MS" , Verdana, Helvetica, Sans-Serif;
-    font-weight: lighter;
-    line-height: 1.1em;
-    min-height: 800px;
-    color: #a00;
+﻿/*Ivan Start
+*/
+body {
+	margin: 14px;
+	
+	background: #ffd0a7;
+	font: normal small Arial, Helvetica, sans-serif;
+	
+	color: #000;
+	
 }
 
-h1
-{
-    text-align: center;
-    font-size: 1.4em;
-    font-weight: bold;
-    color: #22a;
+
+#menu {
+	
+	width: 150%;
+	height:25px;
+	margin: 0 auto;
+	margin-left:-10%;
+	margin-right:140%;
+	padding: 0;
+	background: #ffaf6a;
+	font-weight:900;
+	border: 5px solid #ff7f0f;
+	border-top: 5em solid #ff7f0f;
+	border-bottom: 0px solid #ff7f0f;
 }
 
-p
-{
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: 1.0em;
-    font-weight: bolder;
-    text-align: left;
+
+#menu ul {
+	margin: 0;
+	padding: 0;
+	position:absolute;
+    right:25%;
+    left:25%;
+    
+	list-style: none;
+	
+	
 }
 
-.label
-{
-    display: inline-block;
-    width: 100px;
+#menu li {
+	display: inline;
 }
 
-.inputText
-{
-    width: 400px;
+#menu a {
+	//position:absolute;
+	display: block;
+	float: left;
+	width: 73px;
+	height: 18px;
+	padding-top: 5px;
+	padding-bottom: 2px;
+	text-align: center;
+	text-decoration: none;
+	color: #000;
+	font-size:12px;
+	font-weight:normal
 }
 
-#btnPost 
-{
-    display: inline-block;
-	margin-left: 100px;
+#menu a:hover, #menu .active a {
+	background: #ff7f0f;
 }
-
-#divMessageBoard
+#menu p
 {
-    background-color: Yellow;
-    width: 800px;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px 10px 20px 10px; /* ROUNDED */
-    -webkit-border-radius: 20px;
-    -khtml-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
- 
-    -webkit-box-shadow: rgba(80,80, 255, 0.6) 0px 0px 8px, inset rgba(0,0,0,1) 0px -2px 12px;
-    -khtml-box-shadow: rgba(80,80, 255, 0.6) 0px 0px 8px, inset rgba(0,0,0,1) 0px -2px 12px;
-    -moz-box-shadow: rgba(80,80, 255, 0.6) 0px 0px 8px, inset rgba(0,0,0,1) 0px -2px 12px;
-    -ms-box-shadow: rgba(80,80, 255, 0.6) 0px 0px 8px, inset rgba(0,0,0,1) 0px -2px 12px;
-    -o-box-shadow: rgba(80,80, 255, 0.6) 0px 0px 8px, inset rgba(0,0,0,1) 0px -2px 12px;
-  
+	position:absolute;
+   
+    right:39.5%;
+	top:0.1em;
+	
+	color: #000;
+	font-size:230%;
+	font-weight:normal
 }
-
-#divMessageBoard table
-{
-    margin-left: 100px;
-    width: 680px;
-}
-
-#divMessageBoard table th
-{
-    padding: 5px;
-    font-variant: small-caps;
-}
+	
