@@ -1,26 +1,28 @@
+
 <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Vacancy_Form.aspx.cs" Inherits="Vacancy_Form" %>
-<link rel="stylesheet" type="text/css" href="StyleSheet.css">
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+<link rel="stylesheet" type="text/css" href="StyleSheet.css">
     <title>Vacancy Form</title>
 </head>
 <body>
-    <form id="form1" runat="server">
+    
 
     <div id="menu">
 		<ul>
 			<li ><a href="home.aspx">Home</a></li>
 			<li><a href="">News</a></li>
 			<li><a href="staff.aspx">Staff</a></li>
-			<li><a href="">Vacancies</a></li>
+			<li class="active"><a href="">Vacancies</a></li>
 			<li><a href="">Referrals</a></li>
 			<li><a href="">Funding</a></li>
 			<li><a href="">Calendar</a></li>
 			<li><a href="">Gallery</a></li>
-            <li class="active"><a href="">Contact Us</a></li>
+            <li><a href="">Contact Us</a></li>
 		</ul>
         <p>Mid-Lin Day Care Center</p>
         <asp:Label runat="server" ID="hi2"></asp:Label>
@@ -28,7 +30,8 @@
         </asp:Table>
 	</div>
 
-    <div>
+    <form id="form1" runat="server">
+    <div id="Vacancy">
     
         <asp:Label ID="Label1" runat="server" Text="Full Name:"></asp:Label>
         <asp:TextBox ID="txtFullName" runat="server" 
@@ -75,7 +78,7 @@
     <br />
     <asp:Label ID="Label14" runat="server" 
         Text="Maiden Name Or Other Name Known By:"></asp:Label>
-    <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
+    <asp:TextBox ID="txtOtherKnownName" runat="server"></asp:TextBox>
     <br />
     <asp:Label ID="Label15" runat="server" Text="Occupation"></asp:Label>
     <asp:TextBox ID="txtOccupation" runat="server"></asp:TextBox>
@@ -87,7 +90,7 @@
     <asp:TextBox ID="txtDrivingLicence" runat="server"></asp:TextBox>
     <br />
     <asp:Label ID="Label18" runat="server" Text="Sex:"></asp:Label>
-    <asp:DropDownList ID="DropDownList1" runat="server">
+    <asp:DropDownList ID="drpSex" runat="server">
         <asp:ListItem>Male</asp:ListItem>
         <asp:ListItem>Female</asp:ListItem>
     </asp:DropDownList>
@@ -110,13 +113,13 @@
     <asp:TextBox ID="txtCareWork" runat="server"></asp:TextBox>
     <br />
     <asp:Label ID="Label23" runat="server" Text="Activites Co-ordinator:"></asp:Label>
-    <asp:TextBox ID="txtActivites" runat="server"></asp:TextBox>
+    <asp:TextBox ID="txtActivities" runat="server"></asp:TextBox>
     <br />
     <asp:Label ID="Label24" runat="server" Text="Administration:"></asp:Label>
     <asp:TextBox ID="txtAdministration" runat="server"></asp:TextBox>
     <br />
-    <asp:Label ID="txtKitchen" runat="server" Text="Kitchen Assistance:"></asp:Label>
-    <asp:TextBox ID="TextBox20" runat="server"></asp:TextBox>
+    <asp:Label ID="Label126" runat="server" Text="Kitchen Assistance:"></asp:Label>
+    <asp:TextBox ID="txtKitchen" runat="server"></asp:TextBox>
    
     <br />
     <asp:Label ID="Label27" runat="server" Text="Domestic/Cleaning:"></asp:Label>
@@ -186,9 +189,12 @@
         to be considered for a Voluntary position with Mid-Lin Day Care. On signing this 
         form I am aware and give permission that Mid – Lin Day Care will hold my 
         personal information on file. I agree that I will adhere to the confidentiality 
-        of information gained while volunteering at Mid-Lin.<asp:CheckBox ID="chkAgree" 
+        of information gained while volunteering at Mid-Lin.<asp:CheckBox ID="chkAgree" value="Yes"
             runat="server" />
     </p>
+   
+    <asp:Button ID="btnSubmit" runat="server" Text="Submit" 
+        onclick="btnSubmit_Click" />
    
     </form>
 </body>
